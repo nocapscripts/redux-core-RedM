@@ -1,0 +1,4 @@
+RSShared.Locations = {
+    -- add here
+
+}
