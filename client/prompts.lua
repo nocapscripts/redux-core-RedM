@@ -118,7 +118,7 @@ CreateThread(function()
             local coords = GetEntityCoords(cache.ped, true)
             for k,v in pairs(Prompts) do
                 local distance = #(coords - v.coords)
-                if (distance < RS.PromptDistance) then
+                if (distance < RSConfig.PromptDistance) then
                     sleep = 1
                     if (Prompts[k].prompt == nil) then
                         setupPrompt(Prompts[k])
@@ -157,7 +157,7 @@ CreateThread(function()
             for k,v in pairs(PromptGroups) do
                 local distance = #(coords - v.coords)
                 local promptGroup = PromptGroups[k].group
-                if (distance < RS.PromptDistance) then
+                if (distance < RSConfig.PromptDistance) then
                     sleep = 1
                     if (PromptGroups[k].created == false) then
                         setupPromptGroup(PromptGroups[k])

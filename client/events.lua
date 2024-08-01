@@ -17,11 +17,11 @@ end
 RegisterNetEvent('RS:Client:OnPlayerLoaded', function()
     ShutdownLoadingScreenNui()
     LocalPlayer.state:set('isLoggedIn', true, false)
-    if RS.EnablePVP then
+    if RSConfig.EnablePVP then
         Citizen.InvokeNative(0xF808475FA571D823, true)
         SetRelationshipBetweenGroups(5, `PLAYER`, `PLAYER`)
     end
-    if RS.Player.RevealMap then
+    if RSConfig.Player.RevealMap then
         SetMinimapHideFow(true)
     end
     Citizen.InvokeNative(0x39363DFD04E91496, PlayerId(), true) -- enable mercy kil

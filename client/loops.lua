@@ -2,7 +2,7 @@ CreateThread(function()
     while true do
         local sleep = 0
         if LocalPlayer.state.isLoggedIn then
-            sleep = (1000 * 60) * RS.Config.UpdateInterval
+            sleep = (1000 * 60) * RSConfig.Config.UpdateInterval
             TriggerServerEvent('RS:UpdatePlayer')
         end
         Wait(sleep)
@@ -18,6 +18,6 @@ CreateThread(function()
                 SetEntityHealth(cache.ped, currentHealth - decreaseThreshold)
             end
         end
-        Wait(RS.Config.StatusInterval)
+        Wait(RSConfig.Config.StatusInterval)
     end
 end)

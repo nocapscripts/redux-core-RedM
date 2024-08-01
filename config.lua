@@ -98,23 +98,23 @@ RSConfig.Player.PlayerDefaults = {
         account = function() return RS.Functions.CreateAccountNumber() end
     },
     job = {
-        name = 'unemployed',
-        label = 'Civilian',
-        payment = 10,
+        name = 'töötu',
+        label = 'Vaba',
+        payment = 34,
         type = 'none',
         onduty = false,
         isboss = false,
         grade = {
-            name = 'Freelancer',
+            name = 'Vaba',
             level = 0
         }
     },
     gang = {
-        name = 'none',
-        label = 'No Gang Affiliation',
+        name = 'pole',
+        label = 'Vaba',
         isboss = false,
         grade = {
-            name = 'none',
+            name = 'Vaba',
             level = 0
         }
     },
